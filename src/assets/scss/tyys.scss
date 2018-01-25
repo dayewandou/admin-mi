@@ -1,0 +1,152 @@
+//定义通用样式
+@mixin tong{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+//定义页面最外面的内容的宽高
+@mixin body{
+  width: 100%;
+  height: 100%;
+}
+//块元素在div中居中
+@mixin ma{
+  margin: 0 auto;
+}
+//定义宽高
+@mixin wg($width,$height){
+  width: $width;
+  height: $height;
+}
+//加边框
+@mixin bor($color){
+  outline: 1px solid $color;
+}
+//字体样式
+@mixin fs($ztdx){
+  font-size: $ztdx;
+}
+//字体颜色
+@mixin color($color){
+  color:$color;
+}
+//字体居中
+@mixin ztjz{
+  text-align: center;
+}
+//行高
+@mixin lh($height){
+  line-height: $height;
+}
+//背景颜色
+@mixin bg($color){
+  background-color: $color;
+}
+//背景图片样式
+@mixin bjys{
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+//在图片精灵里面的位置
+@mixin bgp($width,$height){
+  background-position: $width $height;
+}
+//浮动
+@mixin fd($fd){
+  @if($fd==0){
+    float: left;
+  }
+  @if($fd==1){
+    float: right;
+  }
+}
+//左外边距
+@mixin ml($ml){
+  margin-left:$ml
+}
+//右外边距
+@mixin mr($mr){
+  margin-right:$mr;
+}
+//上外边距
+@mixin mt($mt){
+  margin-top:$mt;
+}
+//下外边距
+@mixin mb($mb){
+  margin-bottom:$mb;
+}
+//左内边距
+@mixin pl($pl){
+  padding-left:$pl;
+}
+//右内边距
+@mixin pr($pr){
+  padding-right:$pr;
+}
+//元素显示隐藏或者转为行内块
+@mixin ds($ds){
+  @if($ds==0){
+    display: none;
+  }
+  @if($ds==1){
+    display: block;
+  }
+  @if($ds==2){
+    display: inline-block;
+  }
+}
+//添加小手的样式
+@mixin xs{
+  cursor: pointer;
+}
+//定位: 0是relative 1是absolute 2是fixed
+@mixin dingwei($dw,$top,$left){
+  @if($dw == 0){
+    position: relative;
+  }
+  @if($dw == 1){
+    position: absolute;
+
+    @if($left){
+      left: $left;
+    }@else{
+      left: auto;
+    }
+    @if($top){
+      top: $top;
+    }@else{
+      top: auto;
+    }
+  }
+  @if($dw == 2){
+    position: fixed;
+    top: $top;
+    left: $left;
+  }
+}
+@mixin bg-image($url){
+    background-image: url($url+'@2x.png');
+    @media (-webkit-min-device-pixel-ratio:3),(min-device-pixel-ratio:3){
+        background-image: url($url+'@3x.png');
+    }
+}
+@mixin border-1px($color){
+    position: relative;
+    &:after{
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid $color;
+        content: " ";
+    }
+}
+@mixin border-none{
+    &:after{
+        display: none;
+    }
+}

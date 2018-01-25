@@ -1,0 +1,164 @@
+.footer{
+    @include wg(100%,438px);
+    @include bg(#fafafa);
+    .site-footer{
+        @include wg(100%,272px);
+        @include bg(#fff);
+        .site_con{
+            @include wg(1226px,272px);
+            margin: 0 auto;
+            .site_top{
+                @include wg(100%,25px);
+                border-bottom: 1px solid #e0e0e0;
+                padding: 27px 0;
+                .tab{
+                    display: flex;
+                    li{
+                        @include fd(0);
+                        @include lh(25px);
+                        flex: 1;
+                        @include ztjz;
+                        border-right: 1px solid #e0e0e0;
+                        i{
+                            @include ds(2);
+                            @include wg(24px,25px);
+                            @include mr(6px);
+                            @include fs(24px);
+                            vertical-align: middle;
+                        }
+                        a{
+                            @include fs(16px);
+                            @include color(#333);
+                        }
+                        &:last-child{
+                            border-right: none;
+                        }
+                        &:hover{
+                            @include color(#ff6700);
+                            a{
+                                @include color(#ff6700);
+                            }
+                        }
+                    }
+                }
+            }
+            .site_end{
+                @include wg(100%,112px);
+                padding: 40px 0;
+                .site_service{
+                    @include fd(0);
+                    dl{
+                        @include wg(160px,112px);
+                        @include fd(0);
+                        dt{
+                            @include fs(14px);
+                            @include color(#424242);
+                            margin: -1px 0 26px;
+                            @include lh(1.25);
+                        }
+                        dd{
+                            a{
+                                @include fs(12px);
+                                @include color(#333);
+                                margin: 10px 0 0;
+                                &:hover{
+                                    @include color(#ff6700);
+                                }
+                            }
+                        }
+                    }
+                }
+                .site_callus{
+                    @include fd(1);
+                    @include wg(251px,112px);
+                    border-left: 1px solid #e0e0e0;
+                    color: #616161;
+                    @include ztjz;
+                    h2{
+                        margin: 0 0 5px;
+                        @include fs(22px);
+                        @include lh(1);
+                        @include color(#ff6700);
+                    }
+                    p{
+                        @include fs(12px);
+                    }
+                    a{
+                        @include ds(1);
+                        @include wg(118px,28px);
+                        border:1px solid #ff6700;
+                        @include color(#ff6700);
+                        @include ztjz;
+                        @include fs(12px);
+                        @include lh(28px);
+                        @include mt(16px);
+                        @include ml(70px);
+                        transition: all 0.4s;
+                        i{
+                            @include wg(12px,12px);
+                            vertical-align: middle;
+                        }
+                        &:hover{
+                            @include bg(#ff6700);
+                            @include color(#fff);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .site-info{
+        @include wg(1226px,106px);
+        padding: 30px 0;
+        margin: 0 auto;
+        .container{
+            .logo{
+                @include wg(57px,57px);
+                @include fd(0);
+//              background: url('./src/assets/img/logo-footer.png');
+            }
+            .info-text{
+                @include fd(0);
+                @include ml(10px);
+                p{
+                    @include fs(12px);
+                    @include color(#b0b0b0);
+                    @include lh(18px);
+                    a{
+                        @include lh(18px);
+                        @include color(#b0b0b0);
+                        @include fs(12px);
+                        &:hover{
+                            @include color(#ff6700);
+                        }
+                    }
+                }
+                .sites{
+                    a{
+                        @include color(#757575);
+                    }
+                    i{
+                        @include fs(12px);
+                        @include color(#b0b0b0);
+                        margin: 0 1px;
+                    }
+                    span:last-child{
+                        @include color(#757575);
+                    }
+                }
+            }
+            .info-img{
+                @include fd(1);
+            }
+        }
+        .contain{
+            @include fd(0);
+            margin: 30px auto 0;
+            @include wg(100%,19px);
+            @include fs(20px);
+            @include color(#b0b0b0);
+            @include ztjz;
+            letter-spacing: 3px;
+        }
+    }
+}

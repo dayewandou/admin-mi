@@ -1,0 +1,103 @@
+.swiper-container {
+    width: 1226px;
+    height: 460px;
+    margin: auto;
+}
+.swiper-button-prev{
+    left: 234px;
+}
+.lunbo{
+    @include wg(1226px,460px);
+    margin: 0 auto;
+    @include dingwei(0,auto,auto);
+    @include mb(14px);
+    .sidebar{
+        @include wg(234px,460px);
+        @include dingwei(1,0,0);
+        z-index: 5;
+        background: rgba(0,0,0,0.6);
+        .bar{
+            
+            @include wg(234px,420px);
+            padding: 20px 0;
+            @include dingwei(1,0,0);
+            z-index: 5;
+            li{
+                @include wg(174px,42px);
+                padding: 0 30px;
+                @include lh(42px);
+                
+                a{
+                    @include color(#fff);
+                    @include fd(0);
+                    @include fs(14px);
+                }
+                i{
+                    @include ds(2);
+                    @include wg(16px,16px);
+                    @include fd(1);
+                    @include color(#fff);
+                }
+                &:hover{
+                    @include bg(#ff6700);
+                }
+            }
+        }
+        .bar_column{
+            @include dingwei(1,0,0);
+            @include wg(100%,100%);
+            z-index: 3;
+            .bar-main{
+                @include dingwei(1,1px,234px);
+                @include wg(100%,458px);
+                border:1px solid #e0e0e0;
+                border-left: none;
+                box-shadow: 5px 0 3px rgba(0,0,0,0.03);
+                background: deepskyblue;
+            } 
+        }
+    }
+}
+.column{
+    @include wg(1226px,170px);
+    margin: 0 auto;
+    .column_left{
+        @include fd(0);
+        @include wg(234px,170px);
+        background: rgba(0,0,0,0.6);
+        ul{
+            li{
+                @include color(rgba(255,255,255,0.7));
+                @include wg(70px,82px);
+                padding: 0 3px;
+                @include fd(0);
+                @include ztjz;
+                transition: all 0.2s;
+                i{
+                    @include ds(1);
+                    @include mt(20px);
+                    @include fs(30px);
+                }
+                span{
+                    @include ds(1);
+                    @include fs(12px);  
+                }
+                &:hover{
+                    @include color(#fff);
+                }
+            }
+        }
+    }
+    .column_right{
+        @include fd(0);
+        ul{
+            li{
+                @include ml(14px);
+                @include fd(0);
+                img{
+                    @include wg(316px,170px);
+                }
+            }
+        }
+    }
+}

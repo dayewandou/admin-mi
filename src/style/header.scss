@@ -1,0 +1,206 @@
+.headerr{
+    .nav{
+        @include wg(100%,40px);
+        @include bg(#333);
+        .nav_con{
+            @include wg(1226px,40px);
+            margin:0 auto;
+            .left{
+                @include fd(0);
+                .list{
+                    @include wg(380px,40px);
+                    display: flex;
+                    li{
+                        flex: 1;
+                        @include fd(0);
+                        @include lh(35px);
+                        @include ztjz;
+                        a{
+                            @include color(#b0b0b0);
+                            @include fs(12px);
+                            &:hover{
+                                @include color(#fff);
+                            }
+                        }
+                    }
+                }
+            }
+            .right{
+                @include fd(1);
+                .login{
+                    @include fd(0);
+                    height: 40px;
+                    @include lh(35px);
+                    @include mr(15px);
+                    a{
+                        padding: 0 5px;
+                        @include fs(12px);
+                        @include color(#b0b0b0);
+                        &:hover{
+                                @include color(#fff);
+                            }
+                    }
+                }
+                .shopping{
+                    @include fd(0);
+                    @include wg(120px,40px);
+                    @include bg(#424242);
+                    @include lh(35px);
+                    @include color(#b0b0b0);
+                    overflow: hidden;
+                    i{
+                        @include ds(2);
+                        @include wg(20px,20px);
+                        @include pl(17px);
+                        @include mt(3px);
+                    }
+                    span{
+                        @include ds(2);
+                        @include fs(12px);
+                        @include lh(40px);
+                    }
+                    &:hover{
+                        @include bg(#fff);
+                        @include color(#ff6700);
+                    }
+                }
+            }
+        }
+    }
+    .banner{
+        @include wg(1226px,100px);
+        margin: 0 auto;
+//      overflow: hidden;
+        .logo{
+            @include mt(22px);
+            @include fd(0);
+            a{
+                @include ds(2);
+                @include wg(56px,57px);
+            }
+        }
+        .menu{
+            @include fd(0);
+            @include mt(15px);
+            @include ml(100px);
+            .menu_con{
+                    li{
+                        @include fd(0);
+                        a{
+                            @include ds(1);
+                            padding: 26px 10px 38px;
+                            @include color(#333);
+                            @include fs(16px);
+                            &:hover{
+                                @include color(#ff6700);
+                            }
+                        }
+                    }
+            }
+        }
+        .search{
+            @include fd(1);
+            @include wg(296px,50px);
+            @include mt(25px);
+            @include dingwei(0,auto,auto);
+            input{
+                @include wg(223px,28px);
+                border: 1px solid #e0e0e0;
+                padding: 10px;
+                outline: none;
+                @include fd(0);
+            }
+            i{
+                @include ds(2);
+                border: 1px solid #e0e0e0;
+                padding: 15px 16px 16px 17px;
+                @include bg(#fff);
+                @include fd(0);
+                border-left: none;
+                &:hover{
+                    @include bg(#ff6700);
+                    @include color(#fff);
+                    border: 1px solid #ff6700;
+                    border-left: none;
+                }
+            }
+            &:hover{
+                input{
+                    border: 1px solid #C0C0C0;
+                }
+                i{
+                    border: 1px solid #C0C0C0;
+                    border-left: none;
+                }
+            }
+            .hot{
+                @include dingwei(1,12px,87px);
+                a{
+                    @include bg(#eee);
+                    @include fs(12px);
+                    padding: 0 5px;
+                    @include color(#757575);
+                    @include ml(5px);
+                    transition: all 0.2s;
+                    &:hover{
+                        @include bg(#ff6700);
+                        @include color(#fff);
+                    }
+                }
+            }
+            .keyword{
+                width: 243px;
+                border: 1px solid #ff6700;
+                @include dingwei(1,50px,0);
+                border-top: none;
+                z-index: 100;
+                @include bg(#fff);
+                @include ds(0);
+                ul{
+                    li{
+                        width: 213px;
+                        padding: 6px 15px;
+                        a{
+                            @include fs(12px);
+                            @include color(#424242);
+                            span{
+                                @include color(#b0b0b0);
+                                @include fd(1);
+                            }
+                        }
+                        &:hover{
+                            @include bg(#fafafa);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .submenu{
+        @include dingwei(0,auto,auto);
+        z-index: 10;
+        @include wg(100%,0);
+        @include fd(0);
+        background: #0269C2;
+        border-top: 2px solid #fff;
+        transition: all 0.5s;
+        position: absolute;
+        
+        .submenu_con{
+            @include wg(1226px,0px);
+            margin: 0 auto;
+            @include dingwei(0,auto,auto);
+            transition: all 0.5s;
+            .inner{
+                overflow: hidden;
+                @include wg(100%,100%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include fs(50px);
+                @include bg(#fff);
+            }
+        }
+    }
+    
+}
